@@ -51,10 +51,8 @@ security {
 
 	// voters
 	voterNames = [] // 'authenticatedVoter', 'roleVoter', 'closureVoter'
-
 	// providers
 	providerNames = [] // 'daoAuthenticationProvider', 'anonymousAuthenticationProvider', 'rememberMeAuthenticationProvider'
-
 	// AfterInvocationManager
 	afterInvocationManagerProviderNames = []
 
@@ -106,7 +104,7 @@ security {
 
 	// successHandler
 	successHandler {
-		defaultTargetUrl = '/admin_panel'
+		defaultTargetUrl = '/select_panel/select'
 		alwaysUseDefault = false
 		targetUrlParameter = SpringSecurityUtils.DEFAULT_TARGET_PARAMETER // 'spring-security-redirect'
 		ajaxSuccessUrl = '/login/ajaxSuccess'
@@ -114,14 +112,10 @@ security {
 	}
 
 	// requestCache
-	requestCache {
-		createSession = true
-	}
+	requestCache { createSession = true }
 
 	// redirectStrategy
-	redirectStrategy {
-		contextRelative = false
-	}
+	redirectStrategy { contextRelative = false }
 
 	// session fixation prevention
 	useSessionFixationPrevention = true
@@ -137,9 +131,7 @@ security {
 	}
 
 	/** anonymousProcessingFilter */
-	anon {
-		key = 'foo'
-	}
+	anon { key = 'foo' }
 
 	/** authenticationEntryPoint */
 	auth {
@@ -177,12 +169,8 @@ security {
 	password {
 		algorithm = 'bcrypt'
 		encodeHashAsBase64 = false
-		bcrypt {
-			logrounds = 10
-		}
-		hash {
-			iterations = 10000
-		}
+		bcrypt { logrounds = 10 }
+		hash { iterations = 10000 }
 	}
 
 	/** rememberMeServices */
@@ -218,9 +206,7 @@ security {
 
 	// use annotations from Controllers to define security rules
 	// 	change securityConfigType to 'Annotation'
-	controllerAnnotations {
-		staticRules = [:]
-	}
+	controllerAnnotations { staticRules = [:] }
 
 	// use a Map of URL -> roles to define security rules
 	// or List of Maps where the keys are pattern (URL pattern),
@@ -290,9 +276,7 @@ security {
 	}
 
 	// providerManager
-	providerManager {
-		eraseCredentialsAfterAuthentication = true
-	}
+	providerManager { eraseCredentialsAfterAuthentication = true }
 
 	// securityContextRepository
 	scr {
@@ -302,9 +286,7 @@ security {
 	}
 
 	// securityContextPersistenceFilter
-	scpf {
-		forceEagerSessionCreation = false
-	}
+	scpf { forceEagerSessionCreation = false }
 
 	// filterInvocationInterceptor
 	fii {
@@ -315,9 +297,7 @@ security {
 		observeOncePerRequest = true
 	}
 
-	debug {
-		useFilter = false
-	}
+	debug { useFilter = false }
 
 	// SecurityContextHolder
 	sch {
