@@ -134,7 +134,7 @@
 			<g:formRemote class="cssform" name="register"
 				url="[controller:'register', action:'index']">
 				<p>
-					<g:submitButton id="submit" name="Register" />
+					<g:submitButton id="submit" name="${message(code: "springSecurity.register.button")}" />
 				</p>
 			</g:formRemote>
 
