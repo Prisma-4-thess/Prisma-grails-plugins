@@ -106,7 +106,7 @@ security {
 
 	// successHandler
 	successHandler {
-		defaultTargetUrl = '/admin_panel'
+		defaultTargetUrl = '/select_panel/select'
 		alwaysUseDefault = false
 		targetUrlParameter = SpringSecurityUtils.DEFAULT_TARGET_PARAMETER // 'spring-security-redirect'
 		ajaxSuccessUrl = '/login/ajaxSuccess'
